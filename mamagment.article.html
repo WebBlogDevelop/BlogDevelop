@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>欢迎来到靖安-中源</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="stylesheet" type="text/css" href="../css/frame.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/component.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/page.css"/>
+        <!--need font awesome  -->
+    </head>
+    <body>
+        <main>
+            <aside class="toolbar">
+                <div class="logo item"></div>
+                <div id="article-managment" class="item">
+                    <div class="image-toolbar"></div>
+                    <span class="toolname"></span>
+                </div>
+                <div id="tag-managment" class="item">
+                    <div class="image-toolbar"></div>
+                    <span class="toolname"></span>
+                </div>
+                <!--暂时不实现  -->
+                <div id="review-managment" class="item">
+                    <div class="image-toolbar"></div>
+                    <span class="toolname"></span>
+                </div>
+                <div id="sys-managment" class="item">
+                    <div class="image-toolbar"></div>
+                    <span class="toolname"></span>
+                </div>
+            </aside>
+            <article>
+                <div class="header">
+                    <div class="location"></div>
+                    <div class="user-item">
+                        <div class="portrait">
+                            <img src="" alt="">
+                        </div>
+                        <span class="name">用户名</span>
+                    </div>
+                </div>
+                <section class="content-wrapper">
+                   <div class="content">
+                        <div class="tabs-group">
+                            <span class="tab" id="edit">写文章</span>
+                            <span class="tab" id="draft">草稿箱</span>
+                            <span class="tab" id="publish">已发布</span>
+                            <span class="tab" id="recycle">回收站</span>
+                        </div>
+                        <div for="edit">
+                            <form id="editor" action="" method="post">
+                                <label for="title">标题：</label><input id="title" name="title" type="text" autocomplete="false" placeholder="输入文章标题" maxlength="20">
+                                <div class="for">
+                                    <span class="label">标签：</span>
+                                    <div class="tags">
+                                        <span class="tag">
+                                            <span class="data">标签1</span>
+                                            <span class="delete"><li class="fa fa-close"></li></span>
+                                        </span>
+                                        <span class="tag">
+                                            <span class="data">标签2</span>
+                                            <span class="delete"><li class="fa fa-close"></li></span>
+                                        </span>
+                                        <span class="tag">
+                                            <span class="data">标签3</span>
+                                            <span class="delete"><li class="fa fa-close"></li></span>
+                                        </span>
+                                        <span class="tag">
+                                            <span class="data">标签4</span>
+                                            <span class="delete"><li class="fa fa-close"></li></span>
+                                        </span>
+                                    </div>
+                                    <div class="btn">添加标签</div>
+                                </div>
+                            </form> 
+                            <label for="author">作者:</label><input type="text" id="author" autocomplete="false" maxlength="12" placeholder="输入作者">
+                            <div class="label">正文</div>
+                            <div class="rich-edit-wrapper">
+                                <div class="rich-edit"></div>
+                                <div class="drag-bar"></div>
+                            </div>
+                            <div class="btns">
+                                <button id="save" for="editor">保存</button>
+                                <button id="publish" for="">发布</button>
+                                <button id="cancel" for="">取消</button>
+                            </div>
+                        </div>
+                        <div for="draft">
+                            <table>
+                                <tr class="thead">
+                                    <td class="index">序号</td>
+                                    <td class="save-time">保存时间</td>
+                                    <td class="title">标题</td>
+                                    <td class="toolbar">操作</td>
+                                </tr>
+                                <tr class="thead">
+                                    <td class="index">1</td>
+                                    <td class="save-time">2017-08-11"12"34</td>
+                                    <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                    <td class="toolbar">
+                                        <span class="edit-btn">编辑</span>
+                                        <span class="publish-btn">发布</span>
+                                        <span class="delete-btn">删除</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="splitpage">
+                                <span><li class="fa -fa-right-arrow"></li></span>
+                                <span>1</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span><li class="fa -fa-right-arrow"></li></span>
+                            </div>
+                        </div>
+                        <div for="publish">
+                            <table>
+                                <tr class="thead">
+                                    <td class="index">序号</td>
+                                    <td class="save-time">保存时间</td>
+                                    <td class="title">标题</td>
+                                    <td class="visit-num">浏览量</td>
+                                    <td class="toolbar">操作</td>
+                                </tr>
+                                <tr class="thead">
+                                    <td class="index">1</td>
+                                    <td class="save-time">2017-08-11"12"34</td>
+                                    <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                    <td class="visit-num">1214</td>
+                                    <td class="toolbar">
+                                        <span class="edit-btn">编辑</span>
+                                        <span class="delete-btn">删除</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="splitpage">
+                                <span><li class="fa -fa-right-arrow"></li></span>
+                                <span>1</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span><li class="fa -fa-right-arrow"></li></span>
+                            </div>
+                        </div>
+                        <div for="recycle">
+                                                        <table>
+                                <tr class="thead">
+                                    <td class="index">序号</td>
+                                    <td class="save-time">保存时间</td>
+                                    <td class="title">标题</td>
+                                    <td class="toolbar">操作</td>
+                                </tr>
+                                <tr class="thead">
+                                    <td class="index">1</td>
+                                    <td class="save-time">2017-08-11"12"34</td>
+                                    <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                    <td class="toolbar">
+                                        <span class="edit-btn">编辑</span>
+                                        <span class="publish-btn">发布</span>
+                                        <span class="delete-btn">删除</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="splitpage">
+                                <span><li class="fa -fa-right-arrow"></li></span>
+                                <span>1</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span><li class="fa -fa-right-arrow"></li></span>
+                            </div>
+                        </div>
+                        <div for="publish">
+                            <table>
+                                <tr class="thead">
+                                    <td class="index">序号</td>
+                                    <td class="delete-time">删除时间</td>
+                                    <td class="title">标题</td>
+                                    <td class="state">状态</td>
+                                    <td class="toolbar">操作</td>
+                                </tr>
+                                <tr class="thead">
+                                    <td class="index">1</td>
+                                    <td class="delete-time">2017-08-11"12"34</td>
+                                    <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                    <td class="state">1214</td>
+                                    <td class="toolbar">
+                                        <span class="edit-btn">恢复</span>
+                                        <span class="delete-btn">删除</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="splitpage">
+                                <span><li class="fa -fa-right-arrow"></li></span>
+                                <span>1</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span><li class="fa -fa-right-arrow"></li></span>
+                            </div>
+                        </div>               
+                   </div>
+                </section>
+                <div class="tag-selector">
+                </div>
+            </article>
+        </main>
+        <div class="srcoll-top">
+            <div></div>
+        </div>
+    </body>
+</html>          
