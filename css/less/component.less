@@ -1,0 +1,46 @@
+@import "param.less";
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    width:100%;
+    height:auto;
+}
+body{
+    @media screen and (min-width:768px){
+        font-size: 16px;
+    }
+    @media screen and (max-width:768px){
+        font-size:12px;
+    }
+}
+.clearfix{
+    &:after{
+        content:"";
+        display: table;
+    }
+}
+//input component
+input[type="text"],
+input[type="password"],
+textarea{
+    border: @inputborder;
+    padding: 4px 8px;
+    font-size: 1rem;
+    border-radius: 3px;
+    background: transparent;
+    &:hover{
+        background: white;
+        border: @inputhoverborder;
+    }
+    &:focus{
+
+    }
+}
+ input[type="button"],
+ input[type="submit"],
+ input[type="reset"]
+ button{
+
+ }
