@@ -18,10 +18,11 @@ body{
 .clearfix{
     &:after{
         content:"";
-        display: table;
+        display: block;
+        clear:both;
     }
 }
-//input component
+//输入框组件
 input[type="text"],
 input[type="password"],
 textarea{
@@ -38,9 +39,52 @@ textarea{
 
     }
 }
+//  按钮组件
  input[type="button"],
  input[type="submit"],
  input[type="reset"]
- button{
+ button,.btn{
 
  }
+ //搜索框组件
+ .co-search{
+     border:@searchborder;
+     display: inline-block;
+     position: relative;
+     box-sizing: border-box;
+     border-radius: @inputborderradious;
+     input{
+        padding: @inputpadding;
+         width:100%;
+         height:100%;
+         border:transparent;
+         box-sizing: border-box;
+         font-size: .8rem;
+         &:hover{
+             border:none;
+             box-shadow: none;
+         }
+        &:active,&:focus{
+            border:none;
+            box-shadow: none;
+            outline:none;
+        }
+     }
+    .search-btn{
+        position: absolute;
+        cursor:pointer;
+        font-size: 1.2rem;
+        top:0;
+        right:4px;
+        display: flex;
+        align-items: center;
+        height:100%;
+    }
+ }
+ //列表条目
+ //点赞按钮
+ //前台标签按钮
+ //后台菜单按钮
+ //登陆头像
+ //后台标签
+ //系统管理菜单

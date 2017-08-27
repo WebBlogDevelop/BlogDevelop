@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>博客网站组件</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="stylesheet" type="text/css" href="css/frame.css"/>
+        <link rel="stylesheet" type="text/css" href="css/component.css"/>
+        <link rel="stylesheet" type="text/css" href="css/page.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+        <style rel="stylesheet" type="text/css">
+            body{
+                background:#eee;
+            }
+            main{
+                background: white;
+                max-width:960px;
+                margin:auto;
+                box-shadow: 0 0 1px 1px gray;
+                padding: 128px 64px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>组件列表</h1>
+            <!--start  -->
+            <section>
+                <h3>搜索框</h3>
+                <div id="search" class="co-search">
+                    <input type="text" autocomplete="true" maxlength="20" placeholder="搜索你要找的内容">
+                    <div class="search-btn">
+                        <li class="fa fa-search"></li>
+                    </div>
+                </div>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>列表条目展示</h3>
+                <div class="article-item">
+                    <div class="thumnail">
+                        <img alt="" src="image/thumnail.png">
+                    </div>
+                    <h4 class="title">苏州非物质文化遗产馆</h4>
+                    <div class="tags">
+                        <span class="tag">苏州</span>
+                        <span class="tag">非物质文化遗产</span>
+                        <span class="tag">历史</span>
+                    </div>
+                    <div class="meta-data">
+                        <span class="publish">2017.08.20</span>
+                        <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                    </div>
+                </div>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>输入框</h3>
+                <!--已经写了  -->
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>回到顶部按钮</h3>
+                <div class="srcoll-top">
+                    <li class="fa fa-arrow-up"></li>    
+                </div>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>按钮</h3>
+                <button>这是按钮</button>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>点赞按钮</h3>
+                <div class="chear-up">
+                    <div class="content-wrapper">
+                        <span class="data">472</span>
+                        <li class="fa fa-thumbs-o-up"></li>
+                    </div>
+                </div>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>前台标签按钮</h3>
+                <span class="fd-tag">
+                    PPT设计
+                </span>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>首页菜单按钮</h3>
+                <div class="menu-item">
+                    <li class="fa fa-pencil-square-o"></li>
+                    <span>文章管理</span>
+                </div>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>登录头像</h3>
+                <div class="log-in-thumnail">
+                    <span class="portrait">
+                        <img src="image/thumnail.png" alt="头像">
+                    </span>
+                    <span>CUGHUDSON</span>
+                </div>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>后台标签</h3>
+                <div class="be-tag">
+                    <span class="data"></span>
+                    <span class="tag-btn">
+                        <li class="fa fa-close"></li>
+                    </span>
+                </div>
+            </section>
+            <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>系统管理菜单</h3>
+                <div class="sys-config-menu">
+                    <span id="admin-config" class="data">
+                        <li class="fa fa-gears fa-2x"></li>
+                    </span>
+                    <span>管理员配置</span>
+                </div>
+            </section>
+            <!--end  -->
+        </main>
+    </body>
+</html>
