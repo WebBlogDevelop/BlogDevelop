@@ -82,9 +82,129 @@ textarea{
     }
  }
  //列表条目
+ .article-item{
+    display:inline-block;
+    @media screen and (min-width:1280px){
+        width:25%;
+        margin:24px;
+    }
+    @media screen and (max-width:1280px) and (min-width:840px){
+        width:33.333%;
+        margin:24px;
+    }
+    @media screen and (max-width:840px){
+        width:100%;
+        margin:24px;
+    }
+    .thumnail{
+        width:100%;
+        padding-bottom: 66.66666%;
+        height:0;
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+ }
+ 
  //点赞按钮
+ .chear-up{
+     cursor: pointer;
+     width:108px;
+     height:108px;
+     border-radius: 54px;
+     background: @dianzanbg;
+     color:@dianzancolor;
+     position: relative;
+     .content-wrapper{
+         width:100%;
+         height:100%;
+         padding: 12px;
+         box-sizing: border-box;
+         .data,.icon{
+             padding:4px 0;
+         }
+        .data{
+            font-size: 18px;
+            width:100%;
+            display: block;
+            text-align: center;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .icon{
+            font-size: 18px;
+            width:100%;
+            display: block;
+            text-align: center;
+        }
+        li{
+            display: inline-block;
+            font-size: 36px;
+            text-align: center;
+        }
+     }
+    &:hover{
+
+    }
+ }
  //前台标签按钮
+ .fe-tag{
+    display: inline-block;
+    padding:4px 12px;
+    margin:4px;
+    font-size: .8rem;
+    border: @tagborder;
+    border-radius:6px;
+    color:@tagcolor;
+ }
+//后台按钮
+ .be-tag{
+    display: inline-block;
+    padding:4px 12px;
+    margin:4px;
+    font-size: .8rem;
+    border: @tagborder;
+    border-radius:6px;
+    .tag-btn{
+        padding:4px 0 4px 4px;
+        cursor: pointer;
+        li{
+            color:@tagcolor;
+        }
+    }
+ }
+ button,.button{
+     display: inline-block;
+     border: none;
+     outline: none;
+     background:@btnbg;
+     color:@btncolor;
+     box-shadow:@btnborder;
+     padding:8px 12px;
+     border-radius:@btnborderradius;
+     font-size: 1rem;
+     margin:12px 24px;
+ }
  //后台菜单按钮
  //登陆头像
+ .login-portrait{
+     width:auto;
+     .portrait{
+         display: inline-block;
+         height:36px;
+         width:36px;
+         overflow: hidden;
+         border-radius: 18px;
+         img{
+             width:100%;
+             height:100%;
+         }
+     }
+        .data{
+            
+        }
+ }
  //后台标签
  //系统管理菜单
