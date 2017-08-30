@@ -127,6 +127,8 @@ textarea{
         .data{
             font-size: 18px;
             width:100%;
+            padding: 4px 6px;
+            box-sizing: border-box;
             display: block;
             text-align: center;
             text-overflow:ellipsis;
@@ -146,29 +148,62 @@ textarea{
         }
      }
     &:hover{
-
+        //TODO
+    }
+ }
+//回到顶部
+ .srcoll-top{
+     cursor: pointer;
+     width:108px;
+     height:108px;
+     border-radius: 54px;
+     background: @dianzanbg;
+     color:@dianzancolor;
+     position: relative;
+     .content-wrapper{
+         width:100%;
+         height:100%;
+         padding: 12px;
+         box-sizing: border-box;
+         text-align: center;
+         vertical-align: middle;
+        box-sizing: border-box;
+        li{
+            display: block;
+            width:100%;
+            height:100%;
+            line-height: 80px;
+            font-size: 56px;
+        }
+     }
+    &:hover{
+        //TODO
     }
  }
  //前台标签按钮
  .fe-tag{
     display: inline-block;
-    padding:4px 12px;
+    padding:6px 12px;
     margin:4px;
     font-size: .8rem;
     border: @tagborder;
     border-radius:6px;
     color:@tagcolor;
  }
-//后台按钮
+//后台标签
  .be-tag{
     display: inline-block;
-    padding:4px 12px;
+    padding:6px 12px;
     margin:4px;
     font-size: .8rem;
     border: @tagborder;
     border-radius:6px;
+    .tag-data{
+        padding: 0 4px;
+    }
     .tag-btn{
-        padding:4px 0 4px 4px;
+        padding:4px 0 4px 8px;
+        border-left:@tagbtnborder;
         cursor: pointer;
         li{
             color:@tagcolor;
@@ -186,25 +221,47 @@ textarea{
      border-radius:@btnborderradius;
      font-size: 1rem;
      margin:12px 24px;
+     cursor:pointer;
+     &:hover{
+        //TODO
+     }
+     &:active{
+         //TODO
+     }
  }
- //后台菜单按钮
+//首页菜单按钮(后台)
+.menu-item{
+
+}
  //登陆头像
  .login-portrait{
      width:auto;
+     display: inline-block;
      .portrait{
          display: inline-block;
          height:36px;
          width:36px;
          overflow: hidden;
          border-radius: 18px;
+         float:left;
          img{
              width:100%;
              height:100%;
          }
-     }
-        .data{
-            
+        &:hover{
+            //TODO
         }
+        &:active{
+            //TODO
+        }
+     }
+    .username{
+        font-size: .8rem;
+        display: inline-block;
+        line-height: 36px;
+        float:left;
+        padding-left: 12px;
+    }
  }
  //后台标签
  //系统管理菜单
