@@ -7,26 +7,67 @@
 @searchborder:1px solid gray;
 @searchhoverborder:1px solid gray;
 @searchfocusborder:1px solid black;
-//点赞按钮
-@dianzanbg:rgba(0,0,0,.2);
+@searchheight:40px;
+@searchborderradius:@searchheight/2;
+@searchpadding:6px @searchborderradius;
+@focusstatebg:white;
+@focustatehoverandactive:1px solid #5f7d8c;
+@normalstatebg:#5f7d8c;
+//回到顶部按钮
+@dianzanbg:rgba(0,0,0,.34);
 @dianzanhoverbg:fadeout(black,.8);
 @dianzancolor:white;
+@dianzanw:80px;
+@dianzanh:@dianzanw;
+//点赞按钮&
+@chearupw:100px;
+@chearuph:@chearupw;
+@chearupbg:#e8e8e8;
+@chearupcolor:#a9a9a9;
+@chearuppressedbg:#edaa09;
+@chearuppressedcolor:white;
+
 //标签控件
 @tagborder:1px solid #999;
-@tagcolor:#333;
-@tagbtnborder:1px solid #555;
+@tagcolor:#4c6775;
+@tagbg:white;
+@tagbtnborder:1px solid #999;
+@taghoverbg:#7d99a7;
+@taghovercolor:white;
+@tagbtnhoverborder:1px solid white;
+@tagborderradius:4px;
+@tagfontsize:12px;
 //普通按钮
-@btnborder:0 0 0 1px #666;
 @btncolor:white;
-@btnbg:#2196F3;
+@bluebtnbg:#50abd8;
 @btnborderradius:4px;
-//前台菜单
-@mennucolor:white;
-@menubg:gray;
-@menuhovercolor:gray;
-@menuhoverbg:gray;
+@btnfontsize:14px;
+@plainbtnbg:white;
+@plainbtnborder:1px solid black;
+@plaincolor:black;
+@yellowbtnbg:#ff9d00;
 //后台菜单
-@sysitemborderradius:4px;
-@sysitemboxshadow:0 0 3px 3px #efefef;
-@sysitemborder:1px solid #6d6d6d;
+@menuitemh:104px;
+@menuitemw:80px;
+@menunormalcolor:white;
+@menunormalbg:#495b64;
+@menuactivebg:#1b2b33;
+@menuactivecolor:#6ea0b9;
+@menuitemfontsize:12px;
+//系统配置菜单
+@sysitemboxshadow:0 0 0px 1px #efefef;
+@sysitemborder:1px solid #efefef;
 @sysitemcolor:#2196F3;
+@sysitembg:white;
+@sysitemfontcolor:#666;
+@sysitemw:200px;
+@sysitemh:150px;
+@sysitemfontsize:48px;
+@sysitemdatafontsize:18px;
+//登陆头像
+@portraitw:28px;
+@portraith:@portraitw;
+@usernamesize:12px;
+@usernamecolor:#666;
+//当前位置
+@currentloccolor:#666;

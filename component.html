@@ -13,6 +13,9 @@
         <link rel="stylesheet" type="text/css" href="css/component.css"/>
         <link rel="stylesheet" type="text/css" href="css/page.css"/>
         <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+        <link rel="stylesheet" type="text/css" href="resource/styles/monokai-sublime.css"/>
+        <script type="text/javascript" src="resource/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         <style rel="stylesheet" type="text/css">
             body{
                 background:#eee;
@@ -31,7 +34,12 @@
                 color:#888;
             }
             section{
+                padding: 24px;
+                background: #f7f7f7;
                 margin:64px 0;
+            }
+            code{
+                padding:6px 24px !important;
             }
         </style>
     </head>
@@ -46,6 +54,19 @@
                     <div class="search-btn">
                         <li class="fa fa-search"></li>
                     </div>
+                </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;div id=&quot;search&quot; class=&quot;co-search&quot;&gt;
+    &lt;input type=&quot;text&quot; autocomplete=&quot;true&quot; maxlength=&quot;20&quot; placeholder=&quot;搜索你要找的内容&quot;&gt;
+    &lt;div class=&quot;search-btn&quot;&gt;
+        &lt;li class=&quot;fa fa-search&quot;&gt;&lt;/li&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
                 </div>
             </section>
             <!--end  -->
@@ -67,6 +88,28 @@
                         <span class="view-num"><li class="fa fa-eye"></li>123</span>
                     </div>
                 </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;div class=&quot;article-item&quot;&gt;
+    &lt;div class=&quot;thumnail&quot;&gt;
+        &lt;img alt=&quot;&quot; src=&quot;image/thumnail.png&quot;&gt;
+    &lt;/div&gt;
+    &lt;h4 class=&quot;title&quot;&gt;苏州非物质文化遗产馆&lt;/h4&gt;
+    &lt;div class=&quot;tags&quot;&gt;
+        &lt;span class=&quot;tag&quot;&gt;苏州&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;非物质文化遗产&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;历史&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;meta-data&quot;&gt;
+        &lt;span class=&quot;publish&quot;&gt;2017.08.20&lt;/span&gt;
+        &lt;span class=&quot;view-num&quot;&gt;&lt;li class=&quot;fa fa-eye&quot;&gt;&lt;/li&gt;123&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
             </section>
             <!--end  -->
             <!--start  -->
@@ -83,13 +126,38 @@
                         <li class="fa fa-arrow-up"></li>    
                     </div>
                 </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+ &lt;div class=&quot;srcoll-top&quot;&gt;
+    &lt;div class=&quot;content-wrapper&quot;&gt;
+        &lt;li class=&quot;fa fa-arrow-up&quot;&gt;&lt;/li&gt;    
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
             </section>
             <!--end  -->
             <!--start  -->
             <section>
                 <h3>按钮</h3>
-                <button>这是按钮</button>
-                <div class="button">这是按钮</div>
+                <button class="blue-btn">这是按钮</button>
+                <div class="button blue-btn">这是按钮</div>
+                <div class="button plain-btn">这是按钮</div>
+                <div class="button yellow-btn">这是按钮</div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;button class=&quot;blue-btn&quot;&gt;这是按钮&lt;/button&gt;
+&lt;div class=&quot;button blue-btn&quot;&gt;这是按钮&lt;/div&gt;
+&lt;div class=&quot;button plain-btn&quot;&gt;这是按钮&lt;/div&gt;
+&lt;div class=&quot;button yellow-btn&quot;&gt;这是按钮&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
             </section>
             <!--end  -->
             <!--start  -->
@@ -97,11 +165,42 @@
                 <h3>点赞按钮</h3>
                 <div class="chear-up">
                     <div class="content-wrapper">
-                        <span class="icon">
-                            <li class="fa fa-thumbs-o-up"></li>
-                        </span>
                         <span class="data">47200000000</span>
+                        <span class="icon">
+                            <li class="fa fa-thumbs-up"></li>
+                        </span>
                     </div>
+                </div>
+                <div class="chear-up pressed">
+                    <div class="content-wrapper">
+                        <span class="data">47200000000</span>
+                        <span class="icon">
+                            <li class="fa fa-thumbs-up"></li>
+                        </span>
+                    </div>
+                </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;div class=&quot;chear-up&quot;&gt;
+    &lt;div class=&quot;content-wrapper&quot;&gt;
+        &lt;span class=&quot;data&quot;&gt;47200000000&lt;/span&gt;
+        &lt;span class=&quot;icon&quot;&gt;
+            &lt;li class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/li&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;chear-up pressed&quot;&gt;
+    &lt;div class=&quot;content-wrapper&quot;&gt;
+        &lt;span class=&quot;data&quot;&gt;47200000000&lt;/span&gt;
+        &lt;span class=&quot;icon&quot;&gt;
+            &lt;li class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/li&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
                 </div>
             </section>
             <!--end  -->
@@ -111,6 +210,16 @@
                 <span class="fe-tag">
                     <span class="tag-data">PPT设计</span>
                 </span>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;span class=&quot;fe-tag&quot;&gt;
+    &lt;span class=&quot;tag-data&quot;&gt;PPT设计&lt;/span&gt;
+&lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
             </section>
             <!--end  -->
             <!--start  -->
@@ -119,6 +228,25 @@
                 <div class="menu-item">
                     <span class="icon"><li class="fa fa-pencil-square-o"></li></span>
                     <span class="data">文章管理</span>
+                </div>
+                <div class="menu-item active">
+                    <span class="icon"><li class="fa fa-gears"></li></span>
+                    <span class="data">系统管理</span>
+                </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;div class=&quot;menu-item&quot;&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;li class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/li&gt;&lt;/span&gt;
+    &lt;span class=&quot;data&quot;&gt;文章管理&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;menu-item active&quot;&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;li class=&quot;fa fa-gears&quot;&gt;&lt;/li&gt;&lt;/span&gt;
+    &lt;span class=&quot;data&quot;&gt;系统管理&lt;/span&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
                 </div>
             </section>
             <!--end  -->
@@ -129,7 +257,20 @@
                     <span class="portrait">
                         <img src="image/thumnail.png" alt="头像">
                     </span>
-                    <span class="username">CUGHUDSON</span>
+                    <span class="username">黄子江</span>
+                </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;div class=&quot;login-portrait clearfix&quot;&gt;
+    &lt;span class=&quot;portrait&quot;&gt;
+        &lt;img src=&quot;image/thumnail.png&quot; alt=&quot;头像&quot;&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;username&quot;&gt;CUGHUDSON&lt;/span&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
                 </div>
             </section>
             <!--end  -->
@@ -142,20 +283,82 @@
                         <li class="fa fa-close"></li>
                     </span>
                 </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;div class=&quot;be-tag&quot;&gt;
+    &lt;span class=&quot;tag-data&quot;&gt;后台标签&lt;/span&gt;
+    &lt;span class=&quot;tag-btn&quot;&gt;
+        &lt;li class=&quot;fa fa-close&quot;&gt;&lt;/li&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
             </section>
             <!--end  -->
             <!--start  -->
             <section>
                 <h3>系统管理菜单</h3>
                 <div class="sys-config-item">
-                    <span id="admin-config" class="data">
-                        <li class="fa fa-gears fa-2x"></li>
+                    <span id="admin-config" class="item-data">
+                        <li class="fa fa-gears"></li>
                     </span>
                     <a class="trigger" href=""></a>
                     <span class="data">管理员配置</span>
                 </div>
+                <div class="sys-config-item" title="123876305">
+                    <span id="visit-stat" class="item-data">
+                        1282345
+                    </span>
+                    <a class="trigger" href=""></a>
+                    <span class="data">日访问量</span>
+                </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;div class=&quot;sys-config-item&quot;&gt;
+    &lt;span id=&quot;admin-config&quot; class=&quot;item-data&quot;&gt;
+        &lt;li class=&quot;fa fa-gears&quot;&gt;&lt;/li&gt;
+    &lt;/span&gt;
+    &lt;a class=&quot;trigger&quot; href=&quot;&quot;&gt;&lt;/a&gt;
+    &lt;span class=&quot;data&quot;&gt;管理员配置&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sys-config-item&quot; title=&quot;123876305&quot;&gt;
+    &lt;span id=&quot;visit-stat&quot; class=&quot;item-data&quot;&gt;
+        1282345
+    &lt;/span&gt;
+    &lt;a class=&quot;trigger&quot; href=&quot;&quot;&gt;&lt;/a&gt;
+    &lt;span class=&quot;data&quot;&gt;日访问量&lt;/span&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
             </section>
             <!--end  -->
+            <!--start  -->
+            <section>
+                <h3>位置信息</h3>
+                <div id="current-loc">
+                    <span class="data">文章管理</span>
+                    >
+                    <span class="data">草稿箱</span>
+                </div>
+                <div class="code-wrapper">
+                    <h3>html结构:</h3>
+                    <pre>
+                        <code class="html">
+&lt;div id=&quot;current-loc&quot;&gt;
+    &lt;span class=&quot;data&quot;&gt;文章管理&lt;/span&gt;
+    &gt;
+    &lt;span class=&quot;data&quot;&gt;草稿箱&lt;/span&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </section>
         </main>
     </body>
 </html>

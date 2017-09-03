@@ -48,26 +48,50 @@ textarea{
  }
  //搜索框组件
  .co-search{
-     border:@searchborder;
      display: inline-block;
      position: relative;
      box-sizing: border-box;
-     border-radius: @inputborderradious;
+     height:@searchheight;
      input{
-        padding: @inputpadding;
-         width:100%;
-         height:100%;
-         border:transparent;
-         box-sizing: border-box;
-         font-size: .8rem;
-         &:hover{
-             border:none;
+        border:@searchborder;
+        transition:background .5s ease-in-out;
+        will-change: background;
+        border-radius: @searchborderradius;
+        background: @normalstatebg;
+        color:@focusstatebg;
+        padding: @searchpadding;
+        width:100%;
+        height:100%;
+        box-sizing: border-box;
+        font-size: .8rem;
+        &+.search-btn{
+            color:@focusstatebg;
+            will-change:color;
+            transition:color .5s ease-in-out;
+        }
+        &::-webkit-input-placeholder{
+            color:inherit;
+        }
+        &:hover{
              box-shadow: none;
+             background:@normalstatebg;
          }
         &:active,&:focus{
-            border:none;
+            border:@focustatehoverandactive;
             box-shadow: none;
             outline:none;
+            color:black;
+            transition:background .5s ease-in-out;
+            background: @focusstatebg; 
+            will-change: background;
+            input::-webkit-input-placeholder{
+                color:fadeout(@normalstatebg,.10%);
+            }
+            &+.search-btn{
+                color:@normalstatebg;
+                will-change:color;
+                transition:color .5s ease-in-out;
+            }
         }
      }
     .search-btn{
@@ -75,10 +99,13 @@ textarea{
         cursor:pointer;
         font-size: 1.2rem;
         top:0;
-        right:4px;
+        right:@searchborderradius;
         display: flex;
         align-items: center;
         height:100%;
+        li{
+            font-weight: 100;
+        }
     }
  }
  //列表条目
@@ -110,24 +137,25 @@ textarea{
  //点赞按钮
  .chear-up{
      cursor: pointer;
-     width:108px;
-     height:108px;
-     border-radius: 54px;
-     background: @dianzanbg;
-     color:@dianzancolor;
+     width:@chearupw;
+     height:@chearuph;
+     border-radius: @chearuph*0.5;
+     background: @chearupbg;
      position: relative;
+     margin:12px;
      .content-wrapper{
          width:100%;
          height:100%;
          padding: 12px;
          box-sizing: border-box;
          .data,.icon{
-             padding:4px 0;
+            padding:4px 0;
+            color:@chearupcolor;
          }
         .data{
-            font-size: 18px;
+            font-size: 12px;
             width:100%;
-            padding: 4px 6px;
+            padding: 4px 16px;
             box-sizing: border-box;
             display: block;
             text-align: center;
@@ -147,6 +175,12 @@ textarea{
             text-align: center;
         }
      }
+    &.pressed{
+        background:@chearuppressedbg;
+        .data, .icon{
+            color:@chearuppressedcolor;
+        }
+    }
     &:hover{
         //TODO
     }
@@ -154,16 +188,17 @@ textarea{
 //回到顶部
  .srcoll-top{
      cursor: pointer;
-     width:108px;
-     height:108px;
-     border-radius: 54px;
+     width:@dianzanw;
+     height:@dianzanh;
+     border-radius: @dianzanh*0.5;
      background: @dianzanbg;
      color:@dianzancolor;
      position: relative;
+     cursor:pointer;
      .content-wrapper{
          width:100%;
          height:100%;
-         padding: 12px;
+         padding: 8px;
          box-sizing: border-box;
          text-align: center;
          vertical-align: middle;
@@ -172,8 +207,8 @@ textarea{
             display: block;
             width:100%;
             height:100%;
-            line-height: 80px;
-            font-size: 56px;
+            line-height: @dianzanw - 16;
+            font-size: @dianzanw - 32;
         }
      }
     &:hover{
@@ -189,17 +224,32 @@ textarea{
     border: @tagborder;
     border-radius:6px;
     color:@tagcolor;
+    font-size:@tagfontsize;
+    background:@tagbg;
+    cursor:default;
+    &:hover{
+        background:@taghoverbg;
+        border:1px solid darken(@taghoverbg,10%);
+        *{
+            color:@taghovercolor;
+        }
+    }
  }
 //后台标签
  .be-tag{
     display: inline-block;
-    padding:6px 12px;
+    padding:0px 12px;
     margin:4px;
     font-size: .8rem;
     border: @tagborder;
-    border-radius:6px;
+    border-radius:@tagborderradius;
+    color:@tagcolor;
+    font-size:@tagfontsize;
+    background:@tagbg;
+    cursor:default;
     .tag-data{
-        padding: 0 4px;
+        display: inline-block;
+        padding: 6px 4px;
     }
     .tag-btn{
         padding:4px 0 4px 8px;
@@ -209,39 +259,75 @@ textarea{
             color:@tagcolor;
         }
     }
+    &:hover{
+        background:@taghoverbg;
+        border:1px solid darken(@taghoverbg,10%);
+        *{
+            color:@taghovercolor;
+            li{
+                color:inherit;
+            }
+        }
+        & .tag-btn{
+            border-left:@tagbtnhoverborder;
+        }
+    }
  }
- button,.button{
+ button,.button,input[type='button']{
      display: inline-block;
      border: none;
      outline: none;
-     background:@btnbg;
      color:@btncolor;
-     box-shadow:@btnborder;
-     padding:8px 12px;
+     font-size:@btnfontsize;
+     padding:10px 16px;
      border-radius:@btnborderradius;
-     font-size: 1rem;
      margin:12px 24px;
      cursor:pointer;
-     &:hover{
-        //TODO
+     &.blue-btn{
+        background:@bluebtnbg;
+        &:hover{
+            background:darken(@bluebtnbg,5%);
+        }
+        &:active{
+            background: darken(@bluebtnbg,10%);
+        }
      }
-     &:active{
-         //TODO
+     &.plain-btn{
+         background:@plainbtnbg;
+         border:@plainbtnborder;
+         color:@plaincolor;
+         &:hover{
+            background: none;
+         }
+         &:active{
+            background: none;
+         }
      }
+    &.yellow-btn{
+        background:@yellowbtnbg;
+        &:hover{
+            background: darken(@yellowbtnbg,2%);
+        }
+        &:active{
+            background:darken(@yellowbtnbg,5%);
+        }
+    }
  }
 //首页菜单按钮(后台)
 .menu-item{
-    width:81px;
-    height:auto;
+    width:@menuitemw;
+    height:@menuitemh;
     position: relative;
-    color:@mennucolor;
-    background: @menubg;
+    color:@menunormalcolor;
+    background: @menunormalbg;
     box-sizing: border-box;
     padding:6px 0;
+    text-align: center;
+    cursor:pointer;
     .icon{
-        padding: 0 12px;
+        padding: 8px 12px;
         width:auto;
-        font-size:57px;
+        font-size:36px;
         color:inherit;
         display: inline-block;
         text-align: center;
@@ -256,7 +342,19 @@ textarea{
         top:-8px;
         text-align: center;
         display: inline-block;
-        font-size: .9rem;
+        font-size: @menuitemfontsize;
+    }
+    &:hover{
+        background: darken(@menunormalbg,3%);
+    }
+    &.active{
+        background:@menuactivebg;
+        .icon li{
+            color:@menuactivecolor;
+        }
+        .data{
+            color:@menuactivecolor;
+        }
     }
 }
  //登陆头像
@@ -265,10 +363,10 @@ textarea{
      display: inline-block;
      .portrait{
          display: inline-block;
-         height:36px;
-         width:36px;
+         height:@portraith;
+         width:@portraitw;
          overflow: hidden;
-         border-radius: 18px;
+         border-radius: @portraitw*0.5;
          float:left;
          img{
              width:100%;
@@ -282,37 +380,45 @@ textarea{
         }
      }
     .username{
-        font-size: .8rem;
+        font-size: @usernamesize;
         display: inline-block;
-        line-height: 36px;
+        color:@usernamecolor;
+        line-height:@portraith;
         float:left;
         padding-left: 12px;
     }
  }
  //系统管理菜单
 .sys-config-item{
-    width:20%;
-    height:auto;
-    max-width:200px;
-    min-width: 150px;
+    width:@sysitemw;
+    height:@sysitemh;
+    background: @sysitembg;
     border:@sysitemborder;
     box-sizing: border-box;
-    padding: 16px;
+    padding: 25px;
     position: relative;
-    border-radius: @sysitemborderradius;
-    box-shadow: @sysitemboxshadow;
-    #admin-config{
+    margin:32px;
+    &:hover{
+        box-shadow: @sysitemboxshadow;
+    }
+    .item-data{
         display: inline-block;
         position: relative;
         width:100%;
-        font-size: 2.5rem;
-        padding: 4px;
+        font-size: @sysitemfontsize;
+        padding: 0 4px;
         text-align: center;
         box-sizing: border-box;
         margin:auto;
+        font-size: @sysitemfontsize;
+        color:@sysitemcolor;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        white-space: nowrap;
         li{
+            font-size: @sysitemfontsize;
             display: inline-block;
-            color:@sysitemcolor;
+            color:inherit;
         }
     }
     a.trigger{
@@ -326,8 +432,10 @@ textarea{
     .data{
         display: inline-block;
         width:100%;
+        color:@sysitemfontcolor;
         text-align: center;
-        padding: 12px 0;
+        font-size:@sysitemdatafontsize;
+        padding: 8px 0;
     }
     &:hover{
 
@@ -335,4 +443,7 @@ textarea{
     &:active{
 
     }
+}
+#current-loc{
+    color:@currentloccolor;
 }
