@@ -14,6 +14,9 @@
         <link rel="stylesheet" type="text/css" href="css/page.css"/>
         <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
         <link rel="stylesheet" type="text/css" href="resource/styles/monokai-sublime.css"/>
+        <script type="text/javascript" src="js/lib/zepto.js"></script>
+        <script type="text/javascript" src="js/lib/zepto.fx.js"></script>
+        <script type="text/javascript" src="js/component.js"></script>
         <script type="text/javascript" src="resource/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <style rel="stylesheet" type="text/css">
@@ -77,11 +80,32 @@
                     <div class="thumnail">
                         <img alt="" src="image/thumnail.png">
                     </div>
-                    <h4 class="title">苏州非物质文化遗产馆</h4>
+                    <a class="title" href="">苏州非物质文化遗产馆</a>
                     <div class="tags">
                         <span class="tag">苏州</span>
                         <span class="tag">非物质文化遗产</span>
                         <span class="tag">历史</span>
+                        <span class="tag">潮流</span>
+                        <span class="tag">内涵</span>
+                        <span class="tag">文化</span>
+                    </div>
+                    <div class="meta-data">
+                        <span class="publish">2017.08.20</span>
+                        <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <div class="thumnail">
+                        <img alt="" src="image/thumnail.png">
+                    </div>
+                    <a class="title" href="">苏州非物质文化遗产馆</a>
+                    <div class="tags">
+                        <span class="tag">苏州</span>
+                        <span class="tag">非物质文化遗产</span>
+                        <span class="tag">历史</span>
+                        <span class="tag">潮流</span>
+                        <span class="tag">内涵</span>
+                        <span class="tag">文化</span>
                     </div>
                     <div class="meta-data">
                         <span class="publish">2017.08.20</span>
@@ -277,7 +301,13 @@
             <!--start  -->
             <section>
                 <h3>后台标签</h3>
-                <div class="be-tag">
+                <div class="be-tag" data-id="12667">
+                    <span class="tag-data">后台标签</span>
+                    <span class="tag-btn">
+                        <li class="fa fa-close"></li>
+                    </span>
+                </div>
+                <div class="be-tag" data-id="12345667">
                     <span class="tag-data">后台标签</span>
                     <span class="tag-btn">
                         <li class="fa fa-close"></li>
@@ -342,9 +372,9 @@
             <section>
                 <h3>位置信息</h3>
                 <div id="current-loc">
-                    <span class="data">文章管理</span>
+                    <a class="data" href="">文章管理</a>
                     >
-                    <span class="data">草稿箱</span>
+                    <a class="data" href="">草稿箱</a>
                 </div>
                 <div class="code-wrapper">
                     <h3>html结构:</h3>
@@ -361,4 +391,12 @@
             </section>
         </main>
     </body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var tag = new Component.Tag(".be-tag");
+            console.log(tag);
+            var scroll = new Component.Scroll2Top(".srcoll-top");
+            console.log(scroll);
+        })
+    </script>
 </html>

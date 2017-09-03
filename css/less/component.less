@@ -112,7 +112,7 @@ textarea{
  .article-item{
     display:inline-block;
     @media screen and (min-width:1280px){
-        width:25%;
+        width:33.333%;
         margin:24px;
     }
     @media screen and (max-width:1280px) and (min-width:840px){
@@ -125,11 +125,45 @@ textarea{
     }
     .thumnail{
         width:100%;
-        padding-bottom: 66.66666%;
+        padding-bottom: 70.3125%; //16::9
         height:0;
+        overflow:hidden;
         img{
             width:100%;
             height:auto;
+        }
+    }
+    a.title{
+        display: inline-block;
+        font-size:@articleitemheadfontsize;
+        color:@articleitemheadcolor;
+        padding:18px 0;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .tags{
+        white-space: nowrap;
+        padding:6px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .tag{
+            padding:0 4px;
+            display: inline-block;
+            color:@articleitemtagcolor;
+            font-size:@articleitemtagfontsize;
+            &:first-child{
+                padding-left:0;
+            }
+        }
+    }
+    .meta-data{
+        padding: 4px 0;
+        color:@articleitemmetadatacolor;
+        font-size:@articleitemtagfontsize;
+        .view-num{
+            padding-left:12px;
         }
     }
  }
@@ -323,6 +357,8 @@ textarea{
     box-sizing: border-box;
     padding:6px 0;
     text-align: center;
+    will-change: background;
+    transition:background .2s ease-in-out;
     cursor:pointer;
     .icon{
         padding: 8px 12px;
@@ -345,7 +381,9 @@ textarea{
         font-size: @menuitemfontsize;
     }
     &:hover{
-        background: darken(@menunormalbg,3%);
+        will-change: background;
+        transition:background .2s ease-in-out;
+        background: darken(@menunormalbg,5%);
     }
     &.active{
         background:@menuactivebg;
@@ -446,4 +484,12 @@ textarea{
 }
 #current-loc{
     color:@currentloccolor;
+    a{
+        color:inherit;
+        text-decoration: none;
+        &:hover{
+            text-decoration:underline;
+            cursor:pointer;
+        }
+    }
 }
