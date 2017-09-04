@@ -9,64 +9,99 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-touch-fullscreen" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="stylesheet" type="text/css" href="../css/frame.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/component.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/page.css"/>
+        <link rel="stylesheet" type="text/css" href="css/frame.css"/>
+        <link rel="stylesheet" type="text/css" href="css/component.css"/>
+        <link rel="stylesheet" type="text/css" href="css/page.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+        <script type="text/javascript" src="js/lib/zepto.js"></script>
+        <script type="text/javascript" src="js/lib/zepto.fx.js"></script>
+        <script type="text/javascript" src="js/component.js"></script>
     </head>
     <body>
-        <main>
+        <main class="detail clearfix">
             <header>
-                <div class="logo">
+                <div id="logo" class="logo">
                     <img src="" alt="logo 图片">
                 </div>
                 <!--use ajax to search data from server  -->
-                <div id="search">
+                <div id="search" class="co-search">
                     <input type="text" autocomplete="true" maxlength="20" placeholder="搜索你要找的内容">
-                    <div class="search-btn"><li class="fa fa-search"></li></div>
+                    <div class="search-btn">
+                        <li class="fa fa-search"></li>
                     </div>
                 </div>
             </header>
-            <aside>
-                <div class="recommands">
-                    <h3>热门文章</h3>
-                    <ul>
-                        <li class="item">
-                            <span class="name"></span><span class="num"></span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ads">
-                    <div class="item"></div>
-                </div>
-            </aside>
-            <article>
-                <section>
-                    <h2></h2>
-                    <div class="meta-data">
-                        <div class="row">
-                            <div class="tags">
-                                <span class="tag"></span>
-                                <span class="tag"></span>
-                                <span class="tag"></span>
-                                <span class="tag"></span>
-                                <span class="tag"></span>
-                                <span class="tag"></span>
+            <div id="content-wrapper" class="clearfix">
+                <article>
+                    <section>
+                        <h2>南都公益基金会十年回顾(相伴十年 共同成长)</h2>
+                        <div class="meta-data clearfix">
+                            <div class="row">
+                                <div class="tags">
+                                    <span class="fe-tag">魔性</span>
+                                    <span class="fe-tag">南都</span>
+                                    <span class="fe-tag">很长很长的标签</span>
+                                    <span class="fe-tag">十年相伴</span>
+                                </div>
                             </div>
-                            <div class="publishtime">2017-08-12</div>
-                            <div class="viewnumber"><li class="fa fa-eye"></li>123</div>
+                            <div class="row">
+                                <div class="author">
+                                    <span>作者:</span><span class="data">黄子江</span>
+                                </div>
+                                <div class="viewnumber"><li class="fa fa-eye"></li><span class="data">123</span></div>
+                                <div class="publishtime">2017-08-12</div>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="author">
-                                <span>作者:</span><span class="data"></span>
+                        <div class="article-content"></div>
+                        <div class="clear-up-section">
+                            <div class="chear-up-btn">
+                                <div class="content-wrapper">
+                                    <span class="data">47200000000</span>
+                                    <span class="icon">
+                                        <li class="fa fa-thumbs-up"></li>
+                                    </span>
+                                </div>
                             </div>
+                        </div>
+                    </section>
+                    <section class="review"></section>
+                </article>
+                <aside>
+                    <div class="recommands">
+                        <h3>热门文章</h3>
+                        <ul>
+                            <li class="item clearfix">
+                                <a class="name" href="">设计师配色宝典！教你从零开始学配</a><span class="num">1222</span>
+                            </li>
+                            <li class="item clearfix">
+                                <a class="name" href="">设计师配色宝典！教你从零开始学配</a><span class="num">1222</span>
+                            </li>
+                            <li class="item clearfix">
+                                <a class="name" href="">设计师配色宝典！教你从零开始学配</a><span class="num">1222</span>
+                            </li>
+                            <li class="item clearfix">
+                                <a class="name" href="">设计师配色宝典！教你从零开始学配</a><span class="num">1222</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ads">
+                        <div class="item">
+                            <img src="image/ad.png" alt="" title=""/>
                         </div>
                     </div>
-                </section>
-                <section class="review"></section>
-            </article>
+                </aside>
+            </div>
+            <div class="scroll-top">
+                <div class="content-wrapper">
+                    <li class="fa fa-arrow-up"></li>    
+                </div>
+            </div>
         </main>
-        <div class="srcoll-top">
-            <div></div>
-        </div>
     </body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           // var tag = new Component.ChearUp();
+            //var scroll = new Component.Scroll2Top();
+        })
+    </script>
 </html>          

@@ -88,7 +88,7 @@ textarea{
                 color:fadeout(@normalstatebg,.10%);
             }
             &+.search-btn{
-                color:@normalstatebg;
+                color:@normalstatecolor;
                 will-change:color;
                 transition:color .5s ease-in-out;
             }
@@ -169,7 +169,7 @@ textarea{
  }
  
  //点赞按钮
- .chear-up{
+ .chear-up-btn{
      cursor: pointer;
      width:@chearupw;
      height:@chearuph;
@@ -211,8 +211,12 @@ textarea{
      }
     &.pressed{
         background:@chearuppressedbg;
+        will-change: background;
+        transition:background .5s ease-in-out;
         .data, .icon{
+            will-change: background;
             color:@chearuppressedcolor;
+            transition:color .5s ease-in-out;
         }
     }
     &:hover{
@@ -220,7 +224,7 @@ textarea{
     }
  }
 //回到顶部
- .srcoll-top{
+ .scroll-top{
      cursor: pointer;
      width:@dianzanw;
      height:@dianzanh;
@@ -252,7 +256,7 @@ textarea{
  //前台标签按钮
  .fe-tag{
     display: inline-block;
-    padding:6px 12px;
+    padding:3px 12px;
     margin:4px;
     font-size: .8rem;
     border: @tagborder;
@@ -263,8 +267,9 @@ textarea{
     cursor:default;
     &:hover{
         background:@taghoverbg;
+        color:@taghovercolor;
         border:1px solid darken(@taghoverbg,10%);
-        *{
+        & *{
             color:@taghovercolor;
         }
     }
@@ -272,7 +277,7 @@ textarea{
 //后台标签
  .be-tag{
     display: inline-block;
-    padding:0px 12px;
+    padding:4px 4px;
     margin:4px;
     font-size: .8rem;
     border: @tagborder;
@@ -283,10 +288,10 @@ textarea{
     cursor:default;
     .tag-data{
         display: inline-block;
-        padding: 6px 4px;
+        padding: 0 4px 0 4px;
     }
     .tag-btn{
-        padding:4px 0 4px 8px;
+        padding:4px 4px 4px 8px;
         border-left:@tagbtnborder;
         cursor: pointer;
         li{

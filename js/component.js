@@ -17,8 +17,8 @@
         this.Close(func);
         return this;
     };
-    Component.Scroll2Top = function(selector){
-        var ele = $(selector);
+    Component.Scroll2Top = function(){
+        var ele = $(".scroll-top");
         ele.Click = function(){
             ele.on("click",function(){
                 win.scrollTo(0,0);
@@ -27,8 +27,35 @@
         ele.Click();
         return this;
     };
-    Component.ClearUp = function(selector){
-
+    Component.ChearUp = function(func){
+        var ele = $(".chear-up-btn");
+        ele.click(function(){
+            if(!ele.hasClass("pressed")){
+                ele.addClass("pressed");
+            }
+            func();
+        });
+        return this;
     };
-    window.Component = Component;
+    Component.Button = function(selector){
+        var ele = $(selector);
+        const CLICKED = "clicked";
+        Button.Click = function(func){
+            ele.click(function(){
+                var temp = $(this);
+                if(temp.hasClass(CLICKED)){
+
+                }
+            })
+        }
+    }
+    Component.init = function(){
+        window.Component = {
+            "button":new Component.Scroll2Top(),
+            "ChearUp":new Component.ChearUp()
+        };
+    }
+    $(document).ready(function(){
+        Component.init();
+    })
 })(window,document)
