@@ -19,15 +19,15 @@
         <!--need font awesome  -->
     </head>
     <body>
-        <main>
+        <main class="managment">
             <aside class="toolbar">
                 <div class="logo item"></div>
                 <div class="menu-item">
                     <span class="icon"><li class="fa fa-pencil-square-o"></li></span>
                     <span class="data">文章管理</span>
                 </div>
-                <div class="menu-item">
-                    <span class="icon"><li class="fa fa-pencil-square-o"></li></span>
+                <div class="menu-item active">
+                    <span class="icon"><li class="fa fa-gears"></li></span>
                     <span class="data">文章管理</span>
                 </div>
                 <!--暂时不实现  -->
@@ -42,7 +42,11 @@
             </aside>
             <article>
                 <div class="header">
-                    <div class="location"></div>
+                    <div id="current-loc">
+                        <a class="data" href="">文章管理</a>
+                        >
+                        <a class="data" href="">草稿箱</a>
+                    </div>
                     <div class="login-portrait clearfix">
                         <span class="portrait">
                             <img src="image/thumnail.png" alt="头像">

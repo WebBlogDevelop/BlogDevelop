@@ -21,14 +21,21 @@ html {
   display: block;
   clear: both;
 }
-textarea {
+label input {
+  padding-left: 8px;
+}
+textarea,
+input[type="text"],
+input[type="password"] {
   border: 1px solid #5f7d8c;
-  padding: 4px 8px;
+  padding: 8px 12px;
   font-size: 1rem;
   border-radius: 3px;
   background: transparent;
 }
-textarea:hover {
+textarea:hover,
+input[type="text"]:hover,
+input[type="password"]:hover {
   background: white;
   border: 1px solid #c3c3c3;
 }
@@ -308,6 +315,7 @@ input[type='button'] {
   padding: 10px 16px;
   border-radius: 4px;
   margin: 12px 24px;
+  min-width: 92px;
   cursor: pointer;
 }
 button.blue-btn,

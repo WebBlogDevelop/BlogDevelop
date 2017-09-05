@@ -23,9 +23,12 @@ body{
     }
 }
 //输入框组件
-textarea{
+label input{
+    padding-left:8px;
+}
+textarea,input[type="text"],input[type="password"]{
     border: @inputborder;
-    padding: 4px 8px;
+    padding: 8px 12px;
     font-size: 1rem;
     border-radius: 3px;
     background: transparent;
@@ -322,6 +325,7 @@ textarea{
      padding:10px 16px;
      border-radius:@btnborderradius;
      margin:12px 24px;
+     min-width: 92px;
      cursor:pointer;
      &.blue-btn{
         background:@bluebtnbg;

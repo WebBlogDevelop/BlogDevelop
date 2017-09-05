@@ -264,3 +264,39 @@ main.index #content-wrapper .ads .item img {
   width: 100%;
   height: auto;
 }
+main.managment {
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+main.managment aside.toolbar {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  float: left;
+  height: 100%;
+  background: #495b64;
+  z-index: 5;
+}
+main.managment article {
+  width: auto;
+  position: relative;
+  padding-left: 80px;
+  box-sizing: border-box;
+  right: 0;
+}
+main.managment article .header {
+  padding: 18px 48px;
+  box-sizing: border-box;
+  height: 64px;
+  background: #e8e8e8;
+}
+main.managment article .header #current-loc {
+  float: left;
+}
+main.managment article .header .login-portrait {
+  float: right;
+}
+main.managment article section.content-wrapper {
+  padding: 48px 64px;
+}

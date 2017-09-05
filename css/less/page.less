@@ -221,7 +221,42 @@ main.detail,main.index{
 
 // managment page
 
-
+main.managment{
+    height:100%;
+    width:100%;
+    background: @maincolor;
+    aside.toolbar{
+        position: fixed;
+        bottom: 0;
+        top:0;
+        float:left;
+        height:100%;
+        background:@menunormalbg;
+        z-index:5;
+    }
+    article{
+        width:auto;
+        position: relative;
+        padding-left:@menuitemw;
+        box-sizing: border-box;
+        right:0;
+        & .header{
+            padding: 18px 48px;
+            box-sizing: border-box;
+            height:64px;
+            background:#e8e8e8;
+            #current-loc{
+                float:left;
+            }   
+            .login-portrait{
+                float:right;
+            }
+        }
+        & section.content-wrapper{
+            padding: 48px 64px;
+        }
+    }
+}
 //sysconfigpage
 
 //using quill editor to reliaze
