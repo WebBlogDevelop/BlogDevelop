@@ -23,8 +23,6 @@ body{
     }
 }
 //输入框组件
-input[type="text"],
-input[type="password"],
 textarea{
     border: @inputborder;
     padding: 4px 8px;
@@ -111,17 +109,20 @@ textarea{
  //列表条目
  .article-item{
     display:inline-block;
-    @media screen and (min-width:1280px){
-        width:33.333%;
-        margin:24px;
+    @media screen and (min-width:1024px){
+        width:33.3333%;
+        padding:24px;
+        box-sizing: border-box;
     }
-    @media screen and (max-width:1280px) and (min-width:840px){
-        width:33.333%;
-        margin:24px;
+    @media screen and (max-width:1024px) and (min-width:768px){
+        width:50%;
+        box-sizing: border-box;
+        padding:24px;
     }
-    @media screen and (max-width:840px){
+    @media screen and (max-width:768px){
         width:100%;
-        margin:24px;
+        padding:24px;
+        box-sizing: border-box;
     }
     .thumnail{
         width:100%;

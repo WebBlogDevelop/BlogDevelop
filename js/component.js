@@ -2,7 +2,8 @@
 (function(win, doc){
     const Component = {};
     const version = "1.0";
-    Component.Tag = function(selector, func){
+    Component.Tag = function(func){
+        var selector = ".be-tag";
         var ele = $(selector);
         var btn = $(".tag-btn",ele);
         this.Close = function(func){
@@ -30,10 +31,11 @@
     Component.ChearUp = function(func){
         var ele = $(".chear-up-btn");
         ele.click(function(){
-            if(!ele.hasClass("pressed")){
-                ele.addClass("pressed");
+            var temp = $(this);
+            if(!temp.hasClass("pressed")){
+                temp.addClass("pressed");
             }
-            func();
+           // func();
         });
         return this;
     };
@@ -52,7 +54,8 @@
     Component.init = function(){
         window.Component = {
             "button":new Component.Scroll2Top(),
-            "ChearUp":new Component.ChearUp()
+            "ChearUp":new Component.ChearUp(),
+            "BeTag":new Component.Tag()
         };
     }
     $(document).ready(function(){

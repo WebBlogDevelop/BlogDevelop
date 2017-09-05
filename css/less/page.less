@@ -12,7 +12,7 @@ body{
         clear:both;
     }
 }
-//detail page
+//detail page, index page
 main.detail,main.index{
     width:100%;
     max-width:1366px;
@@ -47,6 +47,8 @@ main.detail,main.index{
             padding: 4px 16px;
             #search{
                 float:right;
+                margin:(64-@searchheight)*0.5 0;
+                width:256px;
             }
             #logo{
                 float:left;
@@ -57,10 +59,14 @@ main.detail,main.index{
             width:100%;
             height:48px;
             padding: 4px 12px;
+            #search{
+                margin:(48-@searchheight)*0.5 0;
+                width:100%;
+            }
         }
     }
     #content-wrapper{
-        width:90%;
+        width:92%;
         margin:auto;
         aside{
             float:left;
@@ -69,15 +75,22 @@ main.detail,main.index{
         article{
             float:right;
         }
+        @media screen and (min-width:1024px){
+            padding:24px;
+        }
+        @media screen and (max-width:12px){
+            padding: 12px;
+        }
         @media screen and (min-width:768px){
             aside{
-                width:30%;
+                width:27%;
                 padding: 24px;
                 box-sizing: border-box;
             }
             article{
-                width:60%;
-                padding: 24px 40px 24px 20px;
+                width:70%;
+                padding: 20px 40px 24px 20px;
+                margin-top:32px;
                 box-sizing: border-box;
             }
         }
@@ -94,7 +107,16 @@ main.detail,main.index{
                 padding: 32px 0;
                 text-align: left;
             }
-            .tags{
+            h3{
+                padding:24px 0;
+                color:#b0bec5;
+                font-weight:200;
+                font-size: 18px;
+                @media screen and (max-width:768px){
+                    text-align: center;
+                }
+            }
+            .fe-tags{
                 float:left;
             }
             .publishtime,.viewnumber{
@@ -118,8 +140,10 @@ main.detail,main.index{
                 }
             }
         }
-        .article-content{
-
+        .article-items-wrapper{
+            .article-item{
+                float:left;
+            }
         }
         .clear-up-section{
             text-align: center;
@@ -192,3 +216,13 @@ main.detail,main.index{
         }
     }
 }
+//login page
+
+
+// managment page
+
+
+//sysconfigpage
+
+//using quill editor to reliaze
+//edit page

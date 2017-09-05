@@ -9,63 +9,196 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-touch-fullscreen" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="stylesheet" type="text/css" href="../css/frame.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/component.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/page.css"/>
-        <!--need font awesome  -->
+        <link rel="stylesheet" type="text/css" href="css/frame.css"/>
+        <link rel="stylesheet" type="text/css" href="css/component.css"/>
+        <link rel="stylesheet" type="text/css" href="css/page.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+        <script type="text/javascript" src="js/lib/zepto.js"></script>
+        <script type="text/javascript" src="js/lib/zepto.fx.js"></script>
+        <script type="text/javascript" src="js/component.js"></script>
     </head>
     <body>
-        <main>
+        <main class="index clearfix">
             <header>
-                <div class="logo">
+                <div id="logo" class="logo">
                     <img src="" alt="logo 图片">
                 </div>
                 <!--use ajax to search data from server  -->
-                <div id="search">
+                <div id="search" class="co-search">
                     <input type="text" autocomplete="true" maxlength="20" placeholder="搜索你要找的内容">
-                    <div class="search-btn"></div>
+                    <div class="search-btn">
+                        <li class="fa fa-search"></li>
                     </div>
                 </div>
             </header>
-            <aside>
-                <div class="recommands">
-                    <h3>热门文章</h3>
-                    <ul>
-                        <li class="item">
-                            <span class="name"></span><span class="num"></span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ads">
-                    <div class="item"></div>
-                </div>
-            </aside>
-            <article>
-                <section>
-                    <h3>最近更新</h3>
-                    <div class="article-items">
-                        <div class="article-item">
-                            <div class="thumnail">
-                                <img class="" alt="" src="">
+            <div id="content-wrapper" class="clearfix">
+                <article>
+                    <section>
+                        <h3>最近更新</h3>
+                        <div class="article-items-wrapper clearfix">
+                            <div class="article-item">
+                                <div class="thumnail">
+                                    <img alt="" src="image/thumnail.png">
+                                </div>
+                                <a class="title" href="">苏州非物质文化遗产馆</a>
+                                <div class="tags">
+                                    <span class="tag">苏州</span>
+                                    <span class="tag">非物质文化遗产</span>
+                                    <span class="tag">历史</span>
+                                    <span class="tag">潮流</span>
+                                    <span class="tag">内涵</span>
+                                    <span class="tag">文化</span>
+                                </div>
+                                <div class="meta-data">
+                                    <span class="publish">2017.08.20</span>
+                                    <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                                </div>
                             </div>
-                            <h4 class="title">苏州非物质文化遗产馆</h4>
-                            <div class="tags">
-                                <span class="tag">苏州</span>
-                                <span class="tag">非物质文化遗产</span>
-                                <span class="tag">历史</span>
+                            <div class="article-item">
+                                <div class="thumnail">
+                                    <img alt="" src="image/thumnail.png">
+                                </div>
+                                <a class="title" href="">苏州非物质文化遗产馆</a>
+                                <div class="tags">
+                                    <span class="tag">苏州</span>
+                                    <span class="tag">非物质文化遗产</span>
+                                    <span class="tag">历史</span>
+                                    <span class="tag">潮流</span>
+                                    <span class="tag">内涵</span>
+                                    <span class="tag">文化</span>
+                                </div>
+                                <div class="meta-data">
+                                    <span class="publish">2017.08.20</span>
+                                    <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                                </div>
                             </div>
-                            <div="meta-data">
-                                <span class="publish">2017.08.20</span>
-                                <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                            <div class="article-item">
+                                <div class="thumnail">
+                                    <img alt="" src="image/thumnail.png">
+                                </div>
+                                <a class="title" href="">苏州非物质文化遗产馆</a>
+                                <div class="tags">
+                                    <span class="tag">苏州</span>
+                                    <span class="tag">非物质文化遗产</span>
+                                    <span class="tag">历史</span>
+                                    <span class="tag">潮流</span>
+                                    <span class="tag">内涵</span>
+                                    <span class="tag">文化</span>
+                                </div>
+                                <div class="meta-data">
+                                    <span class="publish">2017.08.20</span>
+                                    <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="thumnail">
+                                    <img alt="" src="image/thumnail.png">
+                                </div>
+                                <a class="title" href="">苏州非物质文化遗产馆</a>
+                                <div class="tags">
+                                    <span class="tag">苏州</span>
+                                    <span class="tag">非物质文化遗产</span>
+                                    <span class="tag">历史</span>
+                                    <span class="tag">潮流</span>
+                                    <span class="tag">内涵</span>
+                                    <span class="tag">文化</span>
+                                </div>
+                                <div class="meta-data">
+                                    <span class="publish">2017.08.20</span>
+                                    <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="thumnail">
+                                    <img alt="" src="image/thumnail.png">
+                                </div>
+                                <a class="title" href="">苏州非物质文化遗产馆</a>
+                                <div class="tags">
+                                    <span class="tag">苏州</span>
+                                    <span class="tag">非物质文化遗产</span>
+                                    <span class="tag">历史</span>
+                                    <span class="tag">潮流</span>
+                                    <span class="tag">内涵</span>
+                                    <span class="tag">文化</span>
+                                </div>
+                                <div class="meta-data">
+                                    <span class="publish">2017.08.20</span>
+                                    <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="thumnail">
+                                    <img alt="" src="image/thumnail.png">
+                                </div>
+                                <a class="title" href="">苏州非物质文化遗产馆</a>
+                                <div class="tags">
+                                    <span class="tag">苏州</span>
+                                    <span class="tag">非物质文化遗产</span>
+                                    <span class="tag">历史</span>
+                                    <span class="tag">潮流</span>
+                                    <span class="tag">内涵</span>
+                                    <span class="tag">文化</span>
+                                </div>
+                                <div class="meta-data">
+                                    <span class="publish">2017.08.20</span>
+                                    <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="thumnail">
+                                    <img alt="" src="image/thumnail.png">
+                                </div>
+                                <a class="title" href="">苏州非物质文化遗产馆</a>
+                                <div class="tags">
+                                    <span class="tag">苏州</span>
+                                    <span class="tag">非物质文化遗产</span>
+                                    <span class="tag">历史</span>
+                                    <span class="tag">潮流</span>
+                                    <span class="tag">内涵</span>
+                                    <span class="tag">文化</span>
+                                </div>
+                                <div class="meta-data">
+                                    <span class="publish">2017.08.20</span>
+                                    <span class="view-num"><li class="fa fa-eye"></li>123</span>
+                                </div>
                             </div>
                         </div>
+                        <div class="load-more">
+                            
+                        </div>
+                    </section>
+                    <section class="review"></section>
+                </article>
+                <aside>
+                    <div class="recommands">
+                        <h3>热门文章</h3>
+                        <ul>
+                            <li class="item clearfix">
+                                <a class="name" href="">设计师配色宝典！教你从零开始学配</a><span class="num">1222</span>
+                            </li>
+                            <li class="item clearfix">
+                                <a class="name" href="">设计师配色宝典！教你从零开始学配</a><span class="num">1222</span>
+                            </li>
+                            <li class="item clearfix">
+                                <a class="name" href="">设计师配色宝典！教你从零开始学配</a><span class="num">1222</span>
+                            </li>
+                            <li class="item clearfix">
+                                <a class="name" href="">设计师配色宝典！教你从零开始学配</a><span class="num">1222</span>
+                            </li>
+                        </ul>
                     </div>
-                </section>
-                <section class="review"></section>
-            </article>
+                    <div class="ads">
+                        <div class="item">
+                            <img src="image/ad.png" alt="" title=""/>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="scroll-top">
+                <div class="content-wrapper">
+                    <li class="fa fa-arrow-up"></li>    
+                </div>
+            </div>
         </main>
-        <div class="srcoll-top">
-            <div></div>
-        </div>
     </body>
 </html>          

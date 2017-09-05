@@ -1,1 +1,266 @@
-body{background:#efefef}.row{width:100%;padding:12px 0}.row:after{content:"";display:block;clear:both}main.detail,main.index{width:100%;max-width:1366px;margin:auto;background:white;height:auto;color:#333}@media screen and (min-width:1366px){main.detail,main.index{box-shadow:0 0 1px 3px #efefef}}@media screen and (min-width:768px){main.detail .scroll-top,main.index .scroll-top{position:fixed;bottom:64px;right:64px}}@media screen and (max-width:768px){main.detail .scroll-top,main.index .scroll-top{display:none}}main.detail header,main.index header{background:#5f7d8c;position:relative;box-sizing:border-box;display:table;vertical-align:center}@media screen and (min-width:768px){main.detail header,main.index header{width:100%;height:64px;padding:4px 16px}main.detail header #search,main.index header #search{float:right}main.detail header #logo,main.index header #logo{float:left}}@media screen and (max-width:768px){main.detail header,main.index header{width:100%;height:48px;padding:4px 12px}}main.detail #content-wrapper,main.index #content-wrapper{width:90%;margin:auto}main.detail #content-wrapper aside,main.index #content-wrapper aside{float:left;position:relative}main.detail #content-wrapper article,main.index #content-wrapper article{float:right}@media screen and (min-width:768px){main.detail #content-wrapper aside,main.index #content-wrapper aside{width:30%;padding:24px;box-sizing:border-box}main.detail #content-wrapper article,main.index #content-wrapper article{width:60%;padding:24px 40px 24px 20px;box-sizing:border-box}}@media screen and (max-width:768px){main.detail #content-wrapper aside,main.index #content-wrapper aside,main.detail #content-wrapper article,main.index #content-wrapper article{width:100%}}main.detail #content-wrapper article h2,main.index #content-wrapper article h2{color:#333;font-size:32px;font-weight:400;padding:32px 0;text-align:left}main.detail #content-wrapper article .tags,main.index #content-wrapper article .tags{float:left}main.detail #content-wrapper article .publishtime,main.index #content-wrapper article .publishtime,main.detail #content-wrapper article .viewnumber,main.index #content-wrapper article .viewnumber{float:right;display:inline-block;font-size:12px;padding:0 12px;color:#999}main.detail #content-wrapper article .viewnumber .data,main.index #content-wrapper article .viewnumber .data{padding-left:6px}main.detail #content-wrapper article .author,main.index #content-wrapper article .author{float:left;font-size:12px;color:#999}main.detail #content-wrapper article .author .data,main.index #content-wrapper article .author .data{padding-left:8px}main.detail #content-wrapper .clear-up-section,main.index #content-wrapper .clear-up-section{text-align:center;padding:24px}main.detail #content-wrapper .clear-up-section .chear-up-btn,main.index #content-wrapper .clear-up-section .chear-up-btn{display:inline-block}main.detail #content-wrapper .recommands,main.index #content-wrapper .recommands{width:100%;margin:32px 0}main.detail #content-wrapper .recommands h3,main.index #content-wrapper .recommands h3{padding:24px 0;color:#b0bec5;font-weight:200;font-size:18px}@media screen and (max-width:768px){main.detail #content-wrapper .recommands h3,main.index #content-wrapper .recommands h3{text-align:center}}main.detail #content-wrapper .recommands ul,main.index #content-wrapper .recommands ul{width:100%;color:#666;font-size:12px}main.detail #content-wrapper .recommands ul li,main.index #content-wrapper .recommands ul li{padding:6px 0;list-style:none;display:inline-block;width:100%}main.detail #content-wrapper .recommands ul li a,main.index #content-wrapper .recommands ul li a{display:inline-block;text-decoration:none;float:left;box-sizing:border-box;width:80%;padding:0 8px 0 0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:inherit}main.detail #content-wrapper .recommands ul li a:hover,main.index #content-wrapper .recommands ul li a:hover{text-decoration:underline}main.detail #content-wrapper .recommands ul li .num,main.index #content-wrapper .recommands ul li .num{width:20%;box-sizing:border-box;display:inline-block;float:right;padding:0 0 0 8px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;text-align:right}main.detail #content-wrapper .ads,main.index #content-wrapper .ads{padding:12px}main.detail #content-wrapper .ads .item,main.index #content-wrapper .ads .item{width:100%;padding:6px;box-sizing:border-box}main.detail #content-wrapper .ads .item img,main.index #content-wrapper .ads .item img{width:100%;height:auto}/*# sourceMappingURL=./page.css.map */
+body {
+  background: #efefef;
+}
+.row {
+  width: 100%;
+  padding: 12px 0;
+}
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+main.detail,
+main.index {
+  width: 100%;
+  max-width: 1366px;
+  margin: auto;
+  background: white;
+  height: auto;
+  color: #333;
+}
+@media screen and (min-width: 1366px) {
+  main.detail,
+  main.index {
+    box-shadow: 0 0 1px 3px #efefef;
+  }
+}
+@media screen and (min-width: 768px) {
+  main.detail .scroll-top,
+  main.index .scroll-top {
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main.detail .scroll-top,
+  main.index .scroll-top {
+    display: none;
+  }
+}
+main.detail header,
+main.index header {
+  background: #5f7d8c;
+  position: relative;
+  box-sizing: border-box;
+  display: table;
+  vertical-align: center;
+}
+@media screen and (min-width: 768px) {
+  main.detail header,
+  main.index header {
+    width: 100%;
+    height: 64px;
+    padding: 4px 16px;
+  }
+  main.detail header #search,
+  main.index header #search {
+    float: right;
+    margin: 12px 0;
+    width: 256px;
+  }
+  main.detail header #logo,
+  main.index header #logo {
+    float: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  main.detail header,
+  main.index header {
+    width: 100%;
+    height: 48px;
+    padding: 4px 12px;
+  }
+  main.detail header #search,
+  main.index header #search {
+    margin: 4px 0;
+    width: 100%;
+  }
+}
+main.detail #content-wrapper,
+main.index #content-wrapper {
+  width: 92%;
+  margin: auto;
+}
+main.detail #content-wrapper aside,
+main.index #content-wrapper aside {
+  float: left;
+  position: relative;
+}
+main.detail #content-wrapper article,
+main.index #content-wrapper article {
+  float: right;
+}
+@media screen and (min-width: 1024px) {
+  main.detail #content-wrapper,
+  main.index #content-wrapper {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 12px) {
+  main.detail #content-wrapper,
+  main.index #content-wrapper {
+    padding: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main.detail #content-wrapper aside,
+  main.index #content-wrapper aside {
+    width: 27%;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  main.detail #content-wrapper article,
+  main.index #content-wrapper article {
+    width: 70%;
+    padding: 20px 40px 24px 20px;
+    margin-top: 32px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  main.detail #content-wrapper aside,
+  main.index #content-wrapper aside,
+  main.detail #content-wrapper article,
+  main.index #content-wrapper article {
+    width: 100%;
+  }
+}
+main.detail #content-wrapper article h2,
+main.index #content-wrapper article h2 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 32px 0;
+  text-align: left;
+}
+main.detail #content-wrapper article h3,
+main.index #content-wrapper article h3 {
+  padding: 24px 0;
+  color: #b0bec5;
+  font-weight: 200;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  main.detail #content-wrapper article h3,
+  main.index #content-wrapper article h3 {
+    text-align: center;
+  }
+}
+main.detail #content-wrapper article .fe-tags,
+main.index #content-wrapper article .fe-tags {
+  float: left;
+}
+main.detail #content-wrapper article .publishtime,
+main.index #content-wrapper article .publishtime,
+main.detail #content-wrapper article .viewnumber,
+main.index #content-wrapper article .viewnumber {
+  float: right;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 12px;
+  color: #999;
+}
+main.detail #content-wrapper article .viewnumber .data,
+main.index #content-wrapper article .viewnumber .data {
+  padding-left: 6px;
+}
+main.detail #content-wrapper article .author,
+main.index #content-wrapper article .author {
+  float: left;
+  font-size: 12px;
+  color: #999;
+}
+main.detail #content-wrapper article .author .data,
+main.index #content-wrapper article .author .data {
+  padding-left: 8px;
+}
+main.detail #content-wrapper .article-items-wrapper .article-item,
+main.index #content-wrapper .article-items-wrapper .article-item {
+  float: left;
+}
+main.detail #content-wrapper .clear-up-section,
+main.index #content-wrapper .clear-up-section {
+  text-align: center;
+  padding: 24px;
+}
+main.detail #content-wrapper .clear-up-section .chear-up-btn,
+main.index #content-wrapper .clear-up-section .chear-up-btn {
+  display: inline-block;
+}
+main.detail #content-wrapper .recommands,
+main.index #content-wrapper .recommands {
+  width: 100%;
+  margin: 32px 0;
+}
+main.detail #content-wrapper .recommands h3,
+main.index #content-wrapper .recommands h3 {
+  padding: 24px 0;
+  color: #b0bec5;
+  font-weight: 200;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  main.detail #content-wrapper .recommands h3,
+  main.index #content-wrapper .recommands h3 {
+    text-align: center;
+  }
+}
+main.detail #content-wrapper .recommands ul,
+main.index #content-wrapper .recommands ul {
+  width: 100%;
+  color: #666;
+  font-size: 12px;
+}
+main.detail #content-wrapper .recommands ul li,
+main.index #content-wrapper .recommands ul li {
+  padding: 6px 0;
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+}
+main.detail #content-wrapper .recommands ul li a,
+main.index #content-wrapper .recommands ul li a {
+  display: inline-block;
+  text-decoration: none;
+  float: left;
+  box-sizing: border-box;
+  width: 80%;
+  padding: 0 8px 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: inherit;
+}
+main.detail #content-wrapper .recommands ul li a:hover,
+main.index #content-wrapper .recommands ul li a:hover {
+  text-decoration: underline;
+}
+main.detail #content-wrapper .recommands ul li .num,
+main.index #content-wrapper .recommands ul li .num {
+  width: 20%;
+  box-sizing: border-box;
+  display: inline-block;
+  float: right;
+  padding: 0 0 0 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: right;
+}
+main.detail #content-wrapper .ads,
+main.index #content-wrapper .ads {
+  padding: 12px;
+}
+main.detail #content-wrapper .ads .item,
+main.index #content-wrapper .ads .item {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+main.detail #content-wrapper .ads .item img,
+main.index #content-wrapper .ads .item img {
+  width: 100%;
+  height: auto;
+}
