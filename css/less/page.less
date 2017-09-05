@@ -233,6 +233,18 @@ main.managment{
         height:100%;
         background:@menunormalbg;
         z-index:5;
+        .logo{
+            height:104px;
+            width:80px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            img{
+                width:50px;
+                margin:auto;
+                display: inline-block;
+            }
+        }
     }
     article{
         width:auto;
@@ -241,10 +253,10 @@ main.managment{
         box-sizing: border-box;
         right:0;
         & .header{
-            padding: 18px 48px;
+            padding: 22px 48px;
             box-sizing: border-box;
-            height:64px;
-            background:#e8e8e8;
+            height:70px;
+            background:white;
             #current-loc{
                 float:left;
             }   
@@ -253,11 +265,109 @@ main.managment{
             }
         }
         & section.content-wrapper{
-            padding: 48px 64px;
+            padding: 24px 48px;
+            background:#f7f7f7;
+            .content{
+                width:100%;
+                .tabs-group{
+                    display: block;
+                    .tab{
+                        margin-right:3px;
+                        background:#f5f7fa;
+                        color:#666;
+                        border:1px solid #dae2ed;
+                        padding: 12px 24px;
+                        font-size:.8rem;
+                        box-sizing: border-box;
+                        float:left;
+                        &.active{
+                            background:white;
+                            color:#333;
+                            border-left:1px solid #dae2ed;
+                            border-right:1px solid #dae2ed;
+                            border-top:2px solid #ff9d00;
+                        }
+                    }
+                }
+                .table-wraper{
+                    display: inline-block;
+                    background:white;
+                    border:1px solid #ececec;
+                }
+                table.draft{
+                    width:960px;
+                    padding:  12px 12px 24px 12px;
+                    position:relative;
+                    top:-2px;
+                    .thead td{
+                        font-weight:bold;
+                    }
+                    td{
+                        padding: 8px 18px;
+                        font-size:12px;
+                        color:#666;
+                        a{
+                            color:#666;
+                            text-decoration: none;
+                            &:hover{
+                                text-decoration: underline;
+                                color:#50abd8;
+                            }
+                        }
+                        &.toolbar span[class$="btn"]{
+                            display: inline-block;
+                            padding:6px 12px;
+                            cursor: pointer;
+                            &:hover{
+                                color:#50abd8;
+                            }
+                        }
+                        &.index,&.save-time,&.toolbar{
+                            text-align: center;
+                        }
+                        &.title{
+                            text-align: left;
+                        }
+                    }
+                }
+                .splitpage{
+                    padding:32px 48px;
+                    width:100%;
+                    position:relative;
+                    box-sizing: border-box;
+                    text-align: center;
+                    span{
+                        cursor:pointer;
+                        display: inline-block;
+                        text-align: center;
+                        width:28px;
+                        height:28px;
+                        border-radius:4px;
+                        color:#333;
+                        font-size:14px;
+                        border:1px solid #dae2ed;
+                        line-height: 28px;
+                        &.current{
+                            border:none;
+                            color:#ff9d00;
+                        }
+                        li{
+                            color:#999;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 //sysconfigpage
-
+main.managment{
+    .content{
+        max-width: 1024px;
+        .sys-config-item{
+            float:left;
+        }
+    }
+}
 //using quill editor to reliaze
 //edit page

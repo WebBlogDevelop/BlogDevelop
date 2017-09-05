@@ -9,97 +9,100 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-touch-fullscreen" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="stylesheet" type="text/css" href="../css/frame.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/component.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/page.css"/>
+        <link rel="stylesheet" type="text/css" href="css/frame.css"/>
+        <link rel="stylesheet" type="text/css" href="css/component.css"/>
+        <link rel="stylesheet" type="text/css" href="css/page.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+        <script type="text/javascript" src="js/lib/zepto.js"></script>
+        <script type="text/javascript" src="js/lib/zepto.fx.js"></script>
+        <script type="text/javascript" src="js/component.js"></script>
         <!--need font awesome  -->
     </head>
-    <body>
-        <main>
+    <body style="background:#f7f7f7">
+        <main class="managment">
             <aside class="toolbar">
-                <div class="logo item"></div>
-                <div id="article-managment" class="item">
-                    <div class="image-toolbar"></div>
-                    <span class="toolname"></span>
+                <div class="logo item">
+                    <img src="image/logo.png" alt="logo 图片">
                 </div>
-                <div id="tag-managment" class="item">
-                    <div class="image-toolbar"></div>
-                    <span class="toolname"></span>
+                <div class="menu-item">
+                    <span class="icon"><li class="fa fa-pencil-square-o"></li></span>
+                    <span class="data">文章管理</span>
+                </div>
+                <div class="menu-item active">
+                    <span class="icon"><li class="fa fa-tags"></li></span>
+                    <span class="data">标签管理</span>
                 </div>
                 <!--暂时不实现  -->
-                <div id="review-managment" class="item">
-                    <div class="image-toolbar"></div>
-                    <span class="toolname"></span>
+                <div class="menu-item">
+                    <span class="icon"><li class="fa fa-comments-o"></li></span>
+                    <span class="data">评论管理</span>
                 </div>
-                <div id="sys-managment" class="item">
-                    <div class="image-toolbar"></div>
-                    <span class="toolname"></span>
+                <div class="menu-item">
+                    <span class="icon"><li class="fa fa-gears"></li></span>
+                    <span class="data">系统管理</span>
                 </div>
             </aside>
             <article>
                 <div class="header">
-                    <div class="location"></div>
-                    <div class="user-item">
-                        <div class="portrait">
-                            <img src="" alt="">
-                        </div>
-                        <span class="name">用户名</span>
+                    <div id="current-loc">
+                        <a class="data" href="">文章管理</a>
+                        >
+                        <a class="data" href="">草稿箱</a>
+                    </div>
+                    <div class="login-portrait clearfix">
+                        <span class="portrait">
+                            <img src="image/thumnail.png" alt="头像">
+                        </span>
+                        <span class="username">黄子江</span>
                     </div>
                 </div>
                 <section class="content-wrapper">
                    <div class="content">
-                        <div class="tabs-group">
-                            <span class="tab" id="edit">写文章</span>
-                            <span class="tab" id="draft">草稿箱</span>
-                            <span class="tab" id="publish">已发布</span>
-                            <span class="tab" id="recycle">回收站</span>
+                        <div class="sys-config-item" title="123876305">
+                            <span id="visit-stat" class="item-data">
+                                1282345
+                            </span>
+                            <a class="trigger" href=""></a>
+                            <span class="data">日访问量</span>
                         </div>
-                        <div for="review">
-                            <form id="editor" action="" method="post">
-                                <label for="title">标题：</label><input id="title" name="title" type="text" autocomplete="false" placeholder="输入文章标题" maxlength="20">
-                                <div class="for">
-                                    <span class="label">标签：</span>
-                                    <div class="tags">
-                                        <span class="tag">
-                                            <span class="data">标签1</span>
-                                            <span class="delete"><li class="fa fa-close"></li></span>
-                                        </span>
-                                        <span class="tag">
-                                            <span class="data">标签2</span>
-                                            <span class="delete"><li class="fa fa-close"></li></span>
-                                        </span>
-                                        <span class="tag">
-                                            <span class="data">标签3</span>
-                                            <span class="delete"><li class="fa fa-close"></li></span>
-                                        </span>
-                                        <span class="tag">
-                                            <span class="data">标签4</span>
-                                            <span class="delete"><li class="fa fa-close"></li></span>
-                                        </span>
-                                    </div>
-                                    <div class="btn">添加标签</div>
-                                </div>
-                            </form> 
-                            <label for="author">作者:</label><input type="text" id="author" autocomplete="false" maxlength="12" placeholder="输入作者">
-                            <div class="label">正文</div>
-                            <div class="rich-edit-wrapper">
-                                <div class="rich-edit"></div>
-                                <div class="drag-bar"></div>
-                            </div>
-                            <div class="btns">
-                                <button id="save" for="editor">保存</button>
-                                <button id="publish" for="">发布</button>
-                                <button id="cancel" for="">取消</button>
-                            </div>
+                        <div class="sys-config-item" title="2248">
+                            <span id="visit-stat" class="item-data">
+                                2248
+                            </span>
+                            <a class="trigger" href=""></a>
+                            <span class="data">总访问量</span>
                         </div>
-                   </div>
+                        <div class="sys-config-item" title="123876305">
+                            <span id="visit-stat" class="item-data">
+                                TOP
+                            </span>
+                            <a class="trigger" href=""></a>
+                            <span class="data">访问量最高</span>
+                        </div>
+                        <div class="sys-config-item">
+                            <span id="admin-config" class="item-data">
+                                <li class="fa fa-database"></li>
+                            </span>
+                            <a class="trigger" href=""></a>
+                            <span class="data">数据库配置</span>
+                        </div>
+                        <div class="sys-config-item">
+                            <span id="admin-config" class="item-data">
+                                <li class="fa fa-user-circle-o"></li>
+                            </span>
+                            <a class="trigger" href=""></a>
+                            <span class="data">管理员配置</span>
+                        </div>
+                        <div class="sys-config-item">
+                            <span id="admin-config" class="item-data">
+                                <li class="fa fa-ellipsis-h"></li>
+                            </span>
+                            <a class="trigger" href=""></a>
+                            <span class="data">其他配置</span>
+                        </div>
+                    </div>
                 </section>
-                <div class="tag-selector">
-                </div>
             </article>
         </main>
-        <div class="srcoll-top">
-            <div></div>
-        </div>
     </body>
 </html>          

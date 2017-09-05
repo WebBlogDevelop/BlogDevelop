@@ -18,26 +18,28 @@
         <script type="text/javascript" src="js/component.js"></script>
         <!--need font awesome  -->
     </head>
-    <body>
+    <body style="background:#f7f7f7">
         <main class="managment">
             <aside class="toolbar">
-                <div class="logo item"></div>
+                <div class="logo item">
+                    <img src="image/logo.png" alt="logo 图片">
+                </div>
                 <div class="menu-item">
                     <span class="icon"><li class="fa fa-pencil-square-o"></li></span>
                     <span class="data">文章管理</span>
                 </div>
                 <div class="menu-item active">
-                    <span class="icon"><li class="fa fa-gears"></li></span>
-                    <span class="data">文章管理</span>
+                    <span class="icon"><li class="fa fa-tags"></li></span>
+                    <span class="data">标签管理</span>
                 </div>
                 <!--暂时不实现  -->
                 <div class="menu-item">
-                    <span class="icon"><li class="fa fa-pencil-square-o"></li></span>
-                    <span class="data">文章管理</span>
+                    <span class="icon"><li class="fa fa-comments-o"></li></span>
+                    <span class="data">评论管理</span>
                 </div>
                 <div class="menu-item">
-                    <span class="icon"><li class="fa fa-pencil-square-o"></li></span>
-                    <span class="data">文章管理</span>
+                    <span class="icon"><li class="fa fa-gears"></li></span>
+                    <span class="data">系统管理</span>
                 </div>
             </aside>
             <article>
@@ -56,165 +58,123 @@
                 </div>
                 <section class="content-wrapper">
                    <div class="content">
-                        <div class="tabs-group">
+                        <div class="tabs-group clearfix">
                             <span class="tab" id="edit">写文章</span>
-                            <span class="tab" id="draft">草稿箱</span>
+                            <span class="tab active" id="draft">草稿箱</span>
                             <span class="tab" id="publish">已发布</span>
                             <span class="tab" id="recycle">回收站</span>
                         </div>
-                        <div for="edit">
-                            <form id="editor" action="" method="post">
-                                <label for="title">标题：</label><input id="title" name="title" type="text" autocomplete="false" placeholder="输入文章标题" maxlength="20">
-                                <div class="for">
-                                    <span class="label">标签：</span>
-                                    <div class="tags">
-                                        <span class="tag">
-                                            <span class="data">标签1</span>
-                                            <span class="delete"><li class="fa fa-close"></li></span>
-                                        </span>
-                                        <span class="tag">
-                                            <span class="data">标签2</span>
-                                            <span class="delete"><li class="fa fa-close"></li></span>
-                                        </span>
-                                        <span class="tag">
-                                            <span class="data">标签3</span>
-                                            <span class="delete"><li class="fa fa-close"></li></span>
-                                        </span>
-                                        <span class="tag">
-                                            <span class="data">标签4</span>
-                                            <span class="delete"><li class="fa fa-close"></li></span>
-                                        </span>
-                                    </div>
-                                    <div class="btn">添加标签</div>
-                                </div>
-                            </form> 
-                            <label for="author">作者:</label><input type="text" id="author" autocomplete="false" maxlength="12" placeholder="输入作者">
-                            <div class="label">正文</div>
-                            <div class="rich-edit-wrapper">
-                                <div class="rich-edit"></div>
-                                <div class="drag-bar"></div>
-                            </div>
-                            <div class="btns">
-                                <button id="save" for="editor">保存</button>
-                                <button id="publish" for="">发布</button>
-                                <button id="cancel" for="">取消</button>
-                            </div>
+                        <div class="table-wraper">
+                        <table for="draft" class="draft">
+                            <tr class="thead">
+                                <td class="index">序号</td>
+                                <td class="save-time">保存时间</td>
+                                <td class="title">标题</td>
+                                <td class="toolbar">操作</td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                            <tr id="table-data">
+                                <td class="index">1</td>
+                                <td class="save-time">2017-08-11"12"34</td>
+                                <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
+                                <td class="toolbar">
+                                    <span class="edit-btn">编辑</span>
+                                    <span class="publish-btn">发布</span>
+                                    <span class="delete-btn">删除</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="splitpage">
+                            <span><li class="fa  fa-chevron-left"></li></span>
+                            <span>1</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span class="current">5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span><li class="fa  fa-chevron-right"></li></span>
                         </div>
-                        <div for="draft">
-                            <table>
-                                <tr class="thead">
-                                    <td class="index">序号</td>
-                                    <td class="save-time">保存时间</td>
-                                    <td class="title">标题</td>
-                                    <td class="toolbar">操作</td>
-                                </tr>
-                                <tr class="thead">
-                                    <td class="index">1</td>
-                                    <td class="save-time">2017-08-11"12"34</td>
-                                    <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
-                                    <td class="toolbar">
-                                        <span class="edit-btn">编辑</span>
-                                        <span class="publish-btn">发布</span>
-                                        <span class="delete-btn">删除</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="splitpage">
-                                <span><li class="fa -fa-right-arrow"></li></span>
-                                <span>1</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
-                                <span><li class="fa -fa-right-arrow"></li></span>
-                            </div>
-                        </div>
-                        <div for="publish">
-                            <table>
-                                <tr class="thead">
-                                    <td class="index">序号</td>
-                                    <td class="save-time">保存时间</td>
-                                    <td class="title">标题</td>
-                                    <td class="visit-num">浏览量</td>
-                                    <td class="toolbar">操作</td>
-                                </tr>
-                                <tr class="thead">
-                                    <td class="index">1</td>
-                                    <td class="save-time">2017-08-11"12"34</td>
-                                    <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
-                                    <td class="visit-num">1214</td>
-                                    <td class="toolbar">
-                                        <span class="edit-btn">编辑</span>
-                                        <span class="delete-btn">删除</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="splitpage">
-                                <span><li class="fa -fa-right-arrow"></li></span>
-                                <span>1</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
-                                <span><li class="fa -fa-right-arrow"></li></span>
-                            </div>
-                        </div>
-                        <div for="recycle">
-                                                        <table>
-                                <tr class="thead">
-                                    <td class="index">序号</td>
-                                    <td class="save-time">保存时间</td>
-                                    <td class="title">标题</td>
-                                    <td class="toolbar">操作</td>
-                                </tr>
-                                <tr class="thead">
-                                    <td class="index">1</td>
-                                    <td class="save-time">2017-08-11"12"34</td>
-                                    <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
-                                    <td class="toolbar">
-                                        <span class="edit-btn">编辑</span>
-                                        <span class="publish-btn">发布</span>
-                                        <span class="delete-btn">删除</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="splitpage">
-                                <span><li class="fa -fa-right-arrow"></li></span>
-                                <span>1</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
-                                <span><li class="fa -fa-right-arrow"></li></span>
-                            </div>
-                        </div>
-                        <div for="publish">
-                            <table>
-                                <tr class="thead">
-                                    <td class="index">序号</td>
-                                    <td class="delete-time">删除时间</td>
-                                    <td class="title">标题</td>
-                                    <td class="state">状态</td>
-                                    <td class="toolbar">操作</td>
-                                </tr>
-                                <tr class="thead">
-                                    <td class="index">1</td>
-                                    <td class="delete-time">2017-08-11"12"34</td>
-                                    <td class="title"><a href="" target="_blank">这里是标题这里是标题这里是标题这里是标题这里是标题这…</a></td>
-                                    <td class="state">1214</td>
-                                    <td class="toolbar">
-                                        <span class="edit-btn">恢复</span>
-                                        <span class="delete-btn">删除</span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="splitpage">
-                                <span><li class="fa -fa-right-arrow"></li></span>
-                                <span>1</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
-                                <span><li class="fa -fa-right-arrow"></li></span>
-                            </div>
-                        </div>               
-                   </div>
+                    </div>
                 </section>
                 <div class="tag-selector">
                 </div>
