@@ -44,7 +44,7 @@ main.detail,main.index{
         @media screen and (min-width:768px){
             width:100%;
             height:64px;
-            padding: 4px 16px;
+            padding: 4px 32px;
             #search{
                 float:right;
                 margin:(64-@searchheight)*0.5 0;
@@ -52,6 +52,11 @@ main.detail,main.index{
             }
             #logo{
                 float:left;
+                margin:(64-@searchheight*0.8)*0.5 0;
+                img{
+                    display: block;
+                    height:@searchheight*0.8;
+                }
             }
 
         }
@@ -271,6 +276,10 @@ main.managment{
                 width:100%;
                 .tabs-group{
                     display: block;
+                    position: relative;
+                    top:1px;
+                    z-index:1;
+                    min-width:540px;
                     .tab{
                         margin-right:3px;
                         background:#f5f7fa;
@@ -280,12 +289,14 @@ main.managment{
                         font-size:.8rem;
                         box-sizing: border-box;
                         float:left;
+                        cursor:pointer;
                         &.active{
                             background:white;
                             color:#333;
                             border-left:1px solid #dae2ed;
                             border-right:1px solid #dae2ed;
                             border-top:2px solid #ff9d00;
+                            border-bottom:transparent;
                         }
                     }
                 }
@@ -293,12 +304,11 @@ main.managment{
                     display: inline-block;
                     background:white;
                     border:1px solid #ececec;
+                    position:relative;
                 }
                 table.draft{
                     width:960px;
                     padding:  12px 12px 24px 12px;
-                    position:relative;
-                    top:-2px;
                     .thead td{
                         font-weight:bold;
                     }
@@ -338,6 +348,7 @@ main.managment{
                     text-align: center;
                     span{
                         cursor:pointer;
+                        user-select: none;
                         display: inline-block;
                         text-align: center;
                         width:28px;
@@ -347,6 +358,9 @@ main.managment{
                         font-size:14px;
                         border:1px solid #dae2ed;
                         line-height: 28px;
+                        &:hover{
+                            background:#f7f7f7;
+                        }
                         &.current{
                             border:none;
                             color:#ff9d00;
