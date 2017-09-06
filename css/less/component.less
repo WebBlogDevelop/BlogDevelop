@@ -31,7 +31,7 @@ textarea,input[type="text"],input[type="password"]{
     padding: 8px 12px;
     font-size: .8rem;
     border-radius: 3px;
-    background: transparent;
+    background: white;
     &:hover{
         background: white;
         border: @inputhoverborder;
@@ -261,7 +261,7 @@ textarea,input[type="text"],input[type="password"]{
  .fe-tag{
     display: inline-block;
     padding:3px 12px;
-    margin:4px;
+    margin:4px 12px;
     font-size: .8rem;
     border: @tagborder;
     border-radius:6px;
@@ -282,7 +282,7 @@ textarea,input[type="text"],input[type="password"]{
  .be-tag{
     display: inline-block;
     padding:4px 4px;
-    margin:4px;
+    margin:4px 12px;
     font-size: .8rem;
     border: @tagborder;
     border-radius:@tagborderradius;
@@ -405,6 +405,16 @@ textarea,input[type="text"],input[type="password"]{
             color:@menuactivecolor;
         }
     }
+    &.disabled{
+        background:#a7a7a7;
+        color:gray;
+        .data{
+            color:gray;
+        }
+        li{
+            color:gray;
+        }
+    }
 }
  //登陆头像
  .login-portrait{
@@ -496,10 +506,19 @@ textarea,input[type="text"],input[type="password"]{
 #current-loc{
     color:@currentloccolor;
     font-size: 16px;
+    a,span{ 
+        display: inline-block;
+        float:left;
+        padding: 0 3px;
+    }
     a{
         color:inherit;
         text-decoration: none;
         font-size: inherit;
+        max-width: 128px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         &:hover{
             text-decoration:underline;
             cursor:pointer;
